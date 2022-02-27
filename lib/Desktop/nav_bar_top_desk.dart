@@ -20,7 +20,7 @@ class TopBarDesktop extends StatelessWidget {
           TopBarTextButton(title: 'Home', url: '/'),
           TopBarTextButton(title: 'My Story', url: '/mystory'),
           TopBarTextButton(title: 'Awards', url: ''),
-          TopBarTextButton(title: 'Hobbies', url: ''),
+          TopBarTextButton(title: 'Hobbies', url: '/hobbies'),
           TopBarTextButton(title: 'Contact', url: '/contact'),
             ],
           ),

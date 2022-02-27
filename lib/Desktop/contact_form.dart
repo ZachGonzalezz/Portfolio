@@ -11,7 +11,7 @@ class ContactForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-         padding: EdgeInsets.fromLTRB(200, 30, 200, 30),
+      padding: EdgeInsets.fromLTRB(200, 30, 200, 30),
       child: Container(
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
@@ -23,7 +23,8 @@ class ContactForm extends StatelessWidget {
             children: [
               Column(
                 children: [
-                  TextfieldContact(height: 100, controller: name, title: 'Name'),
+                  TextfieldContact(
+                      height: 100, controller: name, title: 'Name'),
                   TextfieldContact(
                       height: 100, controller: email, title: 'Email'),
                   TextfieldContact(
@@ -58,27 +59,23 @@ class ContactForm extends StatelessWidget {
 Looking to learn more? 
 Feel free to inquire about services or schedule and appointment.
 ''', fontsize: 20, alignment: TextAlign.center),
-                   const SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Constants.getText(
-                        text: "Email",
-                        fontsize: 35,
-                        weight: FontWeight.w800),
+                        text: "Email", fontsize: 35, weight: FontWeight.w800),
                     Constants.getText(text: '''
 zacharygonzalez1234@gmail.com
 ''', fontsize: 20, alignment: TextAlign.center),
-                   const SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Constants.getText(
-                        text: "Number",
-                        fontsize: 35,
-                        weight: FontWeight.w800),
+                        text: "Number", fontsize: 35, weight: FontWeight.w800),
                     Constants.getText(text: '''
 (702) 553 - 7534
 ''', fontsize: 20, alignment: TextAlign.center),
-                   const SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Constants.getText(
@@ -88,7 +85,7 @@ zacharygonzalez1234@gmail.com
                     Constants.getText(text: '''
 calendly.com/zacharygonzalez1234 
 ''', fontsize: 20, alignment: TextAlign.center),
-                   const SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                   ],
