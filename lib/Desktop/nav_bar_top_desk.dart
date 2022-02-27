@@ -18,7 +18,7 @@ class TopBarDesktop extends StatelessWidget {
             children: [
           Image.asset('images/Portfolio_Logo.png'),
           TopBarTextButton(title: 'Home', url: '/'),
-          TopBarTextButton(title: 'My Story', url: ''),
+          TopBarTextButton(title: 'My Story', url: '/mystory'),
           TopBarTextButton(title: 'Awards', url: ''),
           TopBarTextButton(title: 'Hobbies', url: ''),
           TopBarTextButton(title: 'Contact', url: '/contact'),

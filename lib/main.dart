@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:personal_portfolio/Pages/contact_page.dart';
 import 'package:personal_portfolio/Pages/home_page.dart';
+import 'package:personal_portfolio/Pages/my_story_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/' : (BuildContext context) => const HomePage(),
         '/contact' : (BuildContext context) => const ContactPage(),
+        '/mystory' : (BuildContext context) => const MyStoryPage(),
       },
     );
   }
