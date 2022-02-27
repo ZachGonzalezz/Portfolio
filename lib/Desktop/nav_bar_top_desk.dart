@@ -17,11 +17,11 @@ class TopBarDesktop extends StatelessWidget {
            Row(
             children: [
           Image.asset('images/Portfolio_Logo.png'),
-          TopBarTextButton(title: 'Home', url: ''),
+          TopBarTextButton(title: 'Home', url: '/'),
           TopBarTextButton(title: 'My Story', url: ''),
           TopBarTextButton(title: 'Awards', url: ''),
           TopBarTextButton(title: 'Hobbies', url: ''),
-          TopBarTextButton(title: 'Contact', url: ''),
+          TopBarTextButton(title: 'Contact', url: '/contact'),
             ],
           ),
           Row(

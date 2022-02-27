@@ -17,6 +17,8 @@ class TopBarTextButton extends StatelessWidget {
         child: Constants.getText(text: title, fontsize: 22, weight: FontWeight.w800),
         onPressed: (){
           //go to that page
+        
+          Navigator.pushNamed(context, url);
         }
         
       ),
