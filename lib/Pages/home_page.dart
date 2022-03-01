@@ -36,7 +36,7 @@ class HomePage extends StatelessWidget {
             paragraph:
                 'Knowledge in a variety of programming environments such as VSCode, XCode, and Android Studio, as well as experience with Google Cloud Platform.',
             skillLevels: const {
-              'Vscode' : 0.8,
+              'Vscode' : 0.1,
               'Xcode' : 0.6,
               'Android Studio' : 0.5,
               'Google Cloud Platform' : 0.3
@@ -44,7 +44,7 @@ class HomePage extends StatelessWidget {
             height: 600,
           ),
           const ProjectsDesktop(),
-          const FooterDesktop(),
+          const FooterDesktop()
           
         ],
       ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:personal_portfolio/Pages/awards_page.dart';
 import 'package:personal_portfolio/Pages/contact_page.dart';
 import 'package:personal_portfolio/Pages/hobbies_page.dart';
 import 'package:personal_portfolio/Pages/home_page.dart';
@@ -25,7 +26,8 @@ class MyApp extends StatelessWidget {
         '/' : (BuildContext context) => const HomePage(),
         '/contact' : (BuildContext context) => const ContactPage(),
         '/mystory' : (BuildContext context) => const MyStoryPage(),
-        '/hobbies' : (BuildContext context) =>  const HobbiesPage()
+        '/hobbies' : (BuildContext context) =>  const HobbiesPage(),
+        '/myawards' : (BuildContext context) => const AwardsPage(),
       },
     );
   }
