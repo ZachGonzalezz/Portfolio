@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:personal_portfolio/Widgets/intro_text.dart';
+import 'package:personal_portfolio/responsive.dart';
 
 class IntroDesktop extends StatelessWidget {
   const IntroDesktop({ Key? key }) : super(key: key);
@@ -7,8 +8,16 @@ class IntroDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 200),
-      child: Row(
+      padding: const EdgeInsets.only(top: 50),
+      child: Responsive.isMobileOs(context) ?  
+      Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+            const IntroText(),
+          Image.asset('images/Portfolio_Zach.png', width: 600, height: 600)
+        ],
+      )
+      : Row(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

@@ -1,5 +1,4 @@
-import 'dart:io' show Platform;
-
+import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 
 class Responsive {
@@ -14,7 +13,7 @@ class Responsive {
       MediaQuery.of(context).size.width >= 1200;
 
   //If is true then user in on mobile app if false user is in browser
-  static bool isMobileOs(BuildContext context) => Platform.isAndroid || Platform.isAndroid;
+  static bool isMobileOs(BuildContext context) =>  !kIsWeb;
 
   
 }

@@ -10,7 +10,7 @@ class HeadingWithUnderline extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Constants.getText(text: text,weight: FontWeight.w700, fontsize: 40),
+        Constants.getText(text: text,weight: FontWeight.w700, fontsize: 40, alignment: TextAlign.left),
         Container(
           width: 100,
           height: 10,

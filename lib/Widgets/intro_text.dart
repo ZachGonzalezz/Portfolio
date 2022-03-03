@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:personal_portfolio/constants.dart';
+import 'package:personal_portfolio/responsive.dart';
 
 class IntroText extends StatelessWidget {
   const IntroText({Key? key}) : super(key: key);
@@ -53,9 +54,11 @@ class IntroText extends StatelessWidget {
             height: 20,
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 100),
+            padding: EdgeInsets.only(left: Responsive.isMobileOs(context) ? 0 : 100),
             child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/contact');
+                },
                 child: Container(
                     decoration: BoxDecoration(
                         color: const Color(0xFF3778F6),

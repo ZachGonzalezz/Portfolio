@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:personal_portfolio/Widgets/book.dart';
 import 'package:personal_portfolio/constants.dart';
+import 'package:personal_portfolio/responsive.dart';
 
 class Hobbies extends StatelessWidget {
   Hobbies({Key? key}) : super(key: key);
@@ -11,7 +12,7 @@ class Hobbies extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.fromLTRB(200, 30, 200, 30),
+      padding: Responsive.isMobileOs(context) ? EdgeInsets.all(20) : EdgeInsets.fromLTRB(200, 30, 200, 30),
       child: Container(
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
@@ -41,6 +42,16 @@ class Hobbies extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
+             Responsive.isMobileOs(context) ? 
+             Column(
+               children: [
+Book(url: '1'),
+                  Book(url: '2'),
+                  Book(url: '3'),
+                  Book(url: '4'),
+                  Book(url: '5'),
+               ],
+             ) :
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [

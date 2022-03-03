@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:personal_portfolio/Desktop/footer_desktop.dart';
 import 'package:personal_portfolio/Desktop/my_story.dart';
 import 'package:personal_portfolio/Desktop/nav_bar_top_desk.dart';
+import 'package:personal_portfolio/Widgets/draw.dart';
 import 'package:personal_portfolio/Widgets/showcase_project.dart';
 import 'package:personal_portfolio/Widgets/skill_showcase.dart';
 
@@ -11,37 +12,40 @@ class MyStoryPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
+         drawer: const DrawerMenu(),
       body: ListView(
         children: [
-          TopBarDesktop(),
-          MyStoryDesktop(),
+          const TopBarDesktop(),
+         const  MyStoryDesktop(),
             SkillShowcase(
             title: 'Other Skills',
-            subtitle: 'Front End Development',
+            subtitle: 'When the bugs get to me I:',
             paragraph:
-                'Self-taught in several programming languages including Flutter, Swift, and Python.',
+                'As someone who has ran there own app startup I learned to wear a few hats. I picked up video editing while making an app Platform which has video content on it. Since then I do a youtube channel on the side to help spread knowledge. As a logistical person photoshop is the closest thing I will get to art. As a geek the Web3 movement is something that fascinates me I spend a lot of time looking into Blockchains, Cryptos, NFTs and more.',
             skillLevels: const {
-              'Flutter / Dart' : 0.8,
-              'Apple Swift' : 0.6,
-              'Python' : 0.5
+              'Adobe Premire Pro' : 0.8,
+              'Adobe Photoshop' : 0.6,
+              'Etherium Blockchain' : 0.5
             },
-            height: 400,
+            height: 600,
           ),
           ShowcaseProjectTile(
             image: 'images/Mask Group.png',
             text: '''
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo augue a augue porta pulvinar. Ut finibus odio in felis rutrum placerat.''',
+GuardFlow was very app I started coding when I was 16. Before I beat around the bush let me tell you the entire project failed and never went anywhere. Great resume material you may being saying. I know! (Multiple people told me this was a horrible idea)
+''',
             isFilled: true),
             ShowcaseProjectTile(
             image: 'images/Mask Group-2.png',
             text: '''
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo augue a augue porta pulvinar. Ut finibus odio in felis rutrum placerat.''',
+Instead of hiding my failures I want to tell you about mine. I had this cool never before idea. When I was working as a lifeguard we had a horrible clock in app it always failed. My solution build a better one! No experience building apps but why not!''',
             isFilled: true,
             isFlipped: true,),
             ShowcaseProjectTile(
             image: 'images/Mask Group-1.png',
             text: '''
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo augue a augue porta pulvinar. Ut finibus odio in felis rutrum placerat.''',
+What went wrong? Pretty much everything is the short answer! This was before I knew what user experience was and met a designer if you could not tell! 
+''',
             isFilled: true),
           FooterDesktop()
         ]

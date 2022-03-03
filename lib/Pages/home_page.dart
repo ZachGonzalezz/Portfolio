@@ -4,6 +4,7 @@ import 'package:personal_portfolio/Desktop/footer_desktop.dart';
 import 'package:personal_portfolio/Desktop/intro_desktop.dart';
 import 'package:personal_portfolio/Desktop/nav_bar_top_desk.dart';
 import 'package:personal_portfolio/Desktop/projects_desktop.dart';
+import 'package:personal_portfolio/Widgets/draw.dart';
 import 'package:personal_portfolio/Widgets/skill_showcase.dart';
 
 class HomePage extends StatelessWidget {
@@ -12,6 +13,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: const DrawerMenu(),
         body: Center(
       child: ListView(
         children: [
@@ -19,14 +21,14 @@ class HomePage extends StatelessWidget {
           const IntroDesktop(),
           const AboutMeDesktop(),
           SkillShowcase(
-            title: 'Language',
-            subtitle: 'Front End Development',
+            title: 'Languages',
+            subtitle: 'Mobile Development',
             paragraph:
-                'Self-taught in several programming languages including Flutter, Swift, and Python.',
+                'My go to framework for mobile development is Flutter / dart. However I am also proffient and certified in Apple\'s Swift. Python is my go to for any automation or non mobile specific code.',
             skillLevels: const {
-              'Flutter / Dart' : 0.8,
-              'Apple Swift' : 0.6,
-              'Python' : 0.5
+              'Flutter / Dart' : .95,
+              'Apple Swift' : 0.8,
+              'Python' : 0.6
             },
             height: 400,
           ),
@@ -34,12 +36,12 @@ class HomePage extends StatelessWidget {
             title: 'Software',
             subtitle: 'Programming Software',
             paragraph:
-                'Knowledge in a variety of programming environments such as VSCode, XCode, and Android Studio, as well as experience with Google Cloud Platform.',
+                'I am familiar with the Vistual Studio Code, Android Studio, and Xcode Integrated Development Enviroments. I am proficent is a number of Google Cloud Services including Cloud Run, Firebase, Firestorage, Cloud Functions, App Engine and more.',
             skillLevels: const {
-              'Vscode' : 0.1,
-              'Xcode' : 0.6,
-              'Android Studio' : 0.5,
-              'Google Cloud Platform' : 0.3
+              'Vscode' : 0.95,
+              'Xcode' : 0.85,
+              'Android Studio' : 0.75,
+              'Google Cloud Platform' : 0.7
             },
             height: 600,
           ),

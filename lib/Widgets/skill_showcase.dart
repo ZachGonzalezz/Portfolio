@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:personal_portfolio/Widgets/skill_bar.dart';
 import 'package:personal_portfolio/constants.dart';
+import 'package:personal_portfolio/responsive.dart';
 
 class SkillShowcase extends StatelessWidget {
   SkillShowcase({ Key? key, required this.paragraph, required this.title, required this.subtitle, required this.skillLevels, required this.height}) : super(key: key);
@@ -14,7 +15,7 @@ class SkillShowcase extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(top: 50),
       child: SizedBox(
-        height: height + 200,
+        height: Responsive.isMobileOs(context) ? height * 1.75 + 200 : height + 200,
         width: 600,
         child: Stack(
           children: [
@@ -30,7 +31,48 @@ class SkillShowcase extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Constants.getText(text: title, fontsize: 50, weight: FontWeight.w800),
-                  Row(
+                 const SizedBox(
+                    height: 60,
+                  ),
+                  Responsive.isMobileOs(context) ? 
+                  Column(
+                    mainAxisSize: MainAxisSize.max,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 12),
+                        child: Container(
+                          width: 600,
+                          decoration: BoxDecoration(
+                            color:  const Color(0xFF1D1B34),
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(40.0),
+                            child: Column(
+                              children: [
+                                Constants.getText(text: subtitle, fontsize: 30, weight: FontWeight.w800),
+                                const SizedBox(height: 20,),
+                                Constants.getText(text: paragraph, fontsize: 20),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: height,
+                        width: Responsive.isMobileOs(context) ? 300 : 400,
+                        child: Column(
+                          children: skillLevels.entries.map((e)  {
+                            return SkillBar(title: e.key, percent: e.value);
+                          }).toList(),
+                        ),
+                      ),
+                    ],
+                  ) :
+                  
+                   Row(
                     mainAxisSize: MainAxisSize.max,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.spaceAround,

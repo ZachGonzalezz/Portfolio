@@ -11,25 +11,22 @@ class PolarisShowcaseDesktop extends StatelessWidget {
         ShowcaseProjectTile(
           image: 'images/PolarisShowcase1.png',
           text: '''
-A new way of mentoring. A platform that helps connect tech-passionate students to industry mentors.
-
-Filling the gap between young
-talent and real-world opportunities.
-
-''',
+Polaris was founded by me and my classmate Justin Pecayo. Polaris was founded when multiple of my teachers kept calling life after school the "real world". This Seemed silly to me.
+                ''',
           isFilled: true,
         ),
         ShowcaseProjectTile(
             image: 'images/PolarisShowcase2.png',
             text: '''
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo augue a augue porta pulvinar. Ut finibus odio in felis rutrum placerat.
+Polaris allows students to explore there interests through tracking your likes and silikes on mentor generated content through the swipe left swipe right feature.
 ''',
             isFilled: true, 
             isFlipped: true,),
         ShowcaseProjectTile(
             image: 'images/PolarisShowcase3.png',
             text: '''
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo augue a augue porta pulvinar. Ut finibus odio in felis rutrum placerat.''',
+In 2022 you can buy a TV from your couch, order a pizza, but finding your next career mentor is much harder. Polaris made conencting and interacting with the mentors in your comminutity easy.
+''',
             isFilled: true),
       ],
     );

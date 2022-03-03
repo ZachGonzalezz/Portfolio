@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:personal_portfolio/Desktop/mixedplate_desktop.dart';
 import 'package:personal_portfolio/Desktop/polaris_showcase.dart';
 import 'package:personal_portfolio/constants.dart';
+import 'package:personal_portfolio/responsive.dart';
 
 class ProjectsDesktop extends StatelessWidget {
   const ProjectsDesktop({Key? key}) : super(key: key);
@@ -24,9 +25,9 @@ class ProjectsDesktop extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(
-              height: 1800,
-              child: TabBarView(
+            SizedBox(
+              height: Responsive.isMobileOs(context) ? 2700 : 1800,
+              child: const TabBarView(
                 physics: NeverScrollableScrollPhysics(),
                 children: <Widget>[
                   PolarisShowcaseDesktop(),
