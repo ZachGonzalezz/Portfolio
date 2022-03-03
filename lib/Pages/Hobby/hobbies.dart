@@ -12,7 +12,9 @@ class Hobbies extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: Responsive.isMobileOs(context) ? EdgeInsets.all(20) : EdgeInsets.fromLTRB(200, 30, 200, 30),
+      padding: Responsive.isMobileOs(context)
+          ? EdgeInsets.all(20)
+          : EdgeInsets.fromLTRB(200, 30, 200, 30),
       child: Container(
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
@@ -22,14 +24,16 @@ class Hobbies extends StatelessWidget {
           child: Column(
             children: [
               Constants.getText(
-                  text: 'Reading', fontsize: 30, weight: FontWeight.w800),
-                   const SizedBox(
+                  text: 'Reading',
+                  fontsize: Responsive.isBigDesktop(context) ? 60 : 30,
+                  weight: FontWeight.w800),
+              const SizedBox(
                 height: 20,
               ),
               Constants.getText(
                 text:
                     'One of the things I enjoy doing on my free time is reading! By doing so, it allows me to gain more knowledge and learn things that will prepare me for my future endeavors. Here are some of my favorite books I have read recently. ',
-                fontsize: 20,
+                fontsize: Responsive.isBigDesktop(context) ? 40 : 20,
               ),
               const SizedBox(
                 height: 20,
@@ -45,26 +49,26 @@ class Hobbies extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-             Responsive.isMobileOs(context) ? 
-             Column(
-               children: [
-Book(url: '1'),
-                  Book(url: '2'),
-                  Book(url: '3'),
-                  Book(url: '4'),
-                  Book(url: '5'),
-               ],
-             ) :
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Book(url: '1'),
-                  Book(url: '2'),
-                  Book(url: '3'),
-                  Book(url: '4'),
-                  Book(url: '5'),
-                ],
-              ),
+              Responsive.isMobileOs(context)
+                  ? Column(
+                      children: [
+                        Book(url: '1'),
+                        Book(url: '2'),
+                        Book(url: '3'),
+                        Book(url: '4'),
+                        Book(url: '5'),
+                      ],
+                    )
+                  : Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Book(url: '1'),
+                        Book(url: '2'),
+                        Book(url: '3'),
+                        Book(url: '4'),
+                        Book(url: '5'),
+                      ],
+                    ),
             ],
           ),
         ),

@@ -12,12 +12,15 @@ class IntroText extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 50),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Constants.getText(text: 'Hello, my name is', fontsize: 30),
           Constants.getText(
-              text: 'Zachary Gonzalez', fontsize: 60, weight: FontWeight.w700),
+              text: 'Hello, my name is',
+              fontsize: Responsive.isBigDesktop(context) ? 60 : 30),
+          Constants.getText(
+              text: 'Zachary Gonzalez',
+              fontsize: Responsive.isBigDesktop(context) ? 90 : 60,
+              weight: FontWeight.w700),
           Align(
             alignment: Alignment.centerLeft,
             child: Container(
@@ -38,24 +41,28 @@ class IntroText extends StatelessWidget {
                     style: GoogleFonts.manrope(
                         fontWeight: FontWeight.bold,
                         color: const Color(0xFF2B5AB8),
-                        fontSize: 30)),
+                        fontSize: Responsive.isBigDesktop(context) ? 50 : 30)),
                 TextSpan(
                     text: ' and Entreprenuer',
-                    style:
-                        GoogleFonts.manrope(color: Colors.white, fontSize: 30)),
+                    style: GoogleFonts.manrope(
+                        color: Colors.white,
+                        fontSize: Responsive.isBigDesktop(context) ? 50 : 30)),
               ],
             ),
           ),
           Constants.getText(
               text: 'based in the Vegas area',
               alignment: TextAlign.left,
-              fontsize: 30),
-              const SizedBox(height: 20,),
-             const SizedBox(
+              fontsize: Responsive.isBigDesktop(context) ? 50 : 30),
+          const SizedBox(
+            height: 20,
+          ),
+          const SizedBox(
             height: 20,
           ),
           Padding(
-            padding: EdgeInsets.only(left: Responsive.isMobileOs(context) ? 0 : 100),
+            padding:
+                EdgeInsets.only(left: Responsive.isMobileOs(context) ? 0 : 100),
             child: TextButton(
                 onPressed: () {
                   Navigator.pushNamed(context, '/contact');
@@ -67,7 +74,9 @@ class IntroText extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.all(12.0),
                       child: Constants.getText(
-                          text: 'Contact', weight: FontWeight.w800, fontsize: 40),
+                          text: 'Contact',
+                          weight: FontWeight.w800,
+                          fontsize: Responsive.isBigDesktop(context) ? 70 : 40),
                     ))),
           )
         ],

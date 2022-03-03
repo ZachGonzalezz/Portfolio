@@ -26,19 +26,19 @@ class _GalleryPictureState extends State<GalleryPicture> {
   @override
   void initState() {
     super.initState();
-      widget.images ??= [];
-    
+    widget.images ??= [];
+
     //on first load loads original image to image array so when passed over if user click it shows intro_text
     widget.images!.add(widget.url);
   }
 
   @override
   Widget build(BuildContext context) {
-    if(Responsive.isMobileOs(context)){
+    if (Responsive.isMobileOs(context)) {
       //this keeps
-  isHovering =  true;
+      isHovering = true;
     }
-  
+
     return GestureDetector(
       onTap: () {
         Navigator.push(
@@ -57,7 +57,11 @@ class _GalleryPictureState extends State<GalleryPicture> {
             padding: const EdgeInsets.all(2.0),
             child: SizedBox(
               height: widget.height,
-              width: Responsive.isMobileOs(context) ?  MediaQuery.of(context).size.width / 1.2 :MediaQuery.of(context).size.width / 3.3,
+              width: Responsive.isMobileOs(context)
+                  ? MediaQuery.of(context).size.width / 1.2
+                  : Responsive.isSuperBigDesktop(context)
+                      ? MediaQuery.of(context).size.width / 4.5
+                      : MediaQuery.of(context).size.width / 3.3,
               child: MouseRegion(
                 onHover: (event) {
                   setState(() {
@@ -75,13 +79,17 @@ class _GalleryPictureState extends State<GalleryPicture> {
                     Image.asset(
                       'images/awards/AwardsGallery' + widget.url + '.png',
                       height: widget.height,
-                      width:  Responsive.isMobileOs(context) ?  MediaQuery.of(context).size.width / 1.2 :MediaQuery.of(context).size.width / 3.3,
+                      width: Responsive.isMobileOs(context)
+                          ? MediaQuery.of(context).size.width / 1.2
+                          : MediaQuery.of(context).size.width / 3.3,
                       fit: BoxFit.fill,
                     ),
                     isHovering
                         ? Container(
                             height: widget.height,
-                            width:  Responsive.isMobileOs(context) ?  MediaQuery.of(context).size.width / 1.2 :MediaQuery.of(context).size.width / 3.3,
+                            width: Responsive.isMobileOs(context)
+                                ? MediaQuery.of(context).size.width / 1.2
+                                : MediaQuery.of(context).size.width / 3.3,
                             decoration: BoxDecoration(
                                 color: Colors.black.withOpacity(0.8)),
                             child: Center(

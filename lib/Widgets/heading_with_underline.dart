@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:personal_portfolio/constants.dart';
+import 'package:personal_portfolio/responsive.dart';
 
 class HeadingWithUnderline extends StatelessWidget {
-  HeadingWithUnderline({ Key? key, required this.text }) : super(key: key);
+  HeadingWithUnderline({Key? key, required this.text}) : super(key: key);
 
   String text;
   @override
@@ -10,8 +11,12 @@ class HeadingWithUnderline extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Constants.getText(text: text,weight: FontWeight.w700, fontsize: 40, alignment: TextAlign.left),
-          const SizedBox(
+        Constants.getText(
+            text: text,
+            weight: FontWeight.w700,
+            fontsize: Responsive.isBigDesktop(context) ? 60 : 40,
+            alignment: TextAlign.left),
+        const SizedBox(
           height: 20,
         ),
         Container(
