@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:personal_portfolio/Pages/awards_page.dart';
+import 'package:personal_portfolio/Pages/Awards/awards_page.dart';
+import 'package:personal_portfolio/Pages/Hobby/hobbies_page.dart';
+import 'package:personal_portfolio/Pages/HomePage/home_page.dart';
+import 'package:personal_portfolio/Pages/My_Stroy/my_story_page.dart';
 import 'package:personal_portfolio/Pages/contact_page.dart';
-import 'package:personal_portfolio/Pages/hobbies_page.dart';
-import 'package:personal_portfolio/Pages/home_page.dart';
-import 'package:personal_portfolio/Pages/my_story_page.dart';
 
 void main() {
   runApp(const MyApp());

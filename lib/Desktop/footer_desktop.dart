@@ -101,7 +101,7 @@ class FooterDesktop extends StatelessWidget {
                         TextButton(
                             onPressed: () {
                                  String url =
-                                  'https://polaristech.tech/howto/ResumeProfessional.pdf';
+                                  'http://zacharygonzalez.me/resume/Resume.pdf';
                               if(Responsive.isMobileOs(context)){
                                 launch(url);
                               }
@@ -170,7 +170,7 @@ class FooterDesktop extends StatelessWidget {
                     color: const Color(0xFF909090),
                     fontsize: 20),
                 Constants.getText(
-                    text: 'Last Updated 3.12.22',
+                    text: 'Last Updated 3.2.22',
                     color: const Color(0xFF909090),
                     fontsize: 20),
               ],

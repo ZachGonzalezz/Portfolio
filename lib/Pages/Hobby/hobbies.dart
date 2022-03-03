@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:personal_portfolio/Widgets/book.dart';
+import 'package:personal_portfolio/Pages/Hobby/book.dart';
 import 'package:personal_portfolio/constants.dart';
 import 'package:personal_portfolio/responsive.dart';
 
@@ -22,10 +22,13 @@ class Hobbies extends StatelessWidget {
           child: Column(
             children: [
               Constants.getText(
-                  text: 'Reading', fontsize: 30, weight: FontWeight.bold),
+                  text: 'Reading', fontsize: 30, weight: FontWeight.w800),
+                   const SizedBox(
+                height: 20,
+              ),
               Constants.getText(
                 text:
-                    'One of the things I enjoy doing on my free time is reading books. By doing so, it allows me to gain more knowledge and learn things that will prepare me for my future endeavors. Here are some of my recent titles. ',
+                    'One of the things I enjoy doing on my free time is reading! By doing so, it allows me to gain more knowledge and learn things that will prepare me for my future endeavors. Here are some of my favorite books I have read recently. ',
                 fontsize: 20,
               ),
               const SizedBox(

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:personal_portfolio/Pages/award_show.dart';
+import 'package:personal_portfolio/Pages/Awards/award_show.dart';
 import 'package:personal_portfolio/constants.dart';
 import 'package:personal_portfolio/responsive.dart';
 

@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:personal_portfolio/Widgets/textfield_form.dart';
+import 'package:personal_portfolio/Pages/ContactPage/textfield_form.dart';
 import 'package:personal_portfolio/constants.dart';
 import 'package:personal_portfolio/responsive.dart';
 

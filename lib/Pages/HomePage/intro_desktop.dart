@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:personal_portfolio/Widgets/intro_text.dart';
+import 'package:personal_portfolio/Pages/HomePage/intro_text.dart';
 import 'package:personal_portfolio/responsive.dart';
 
 class IntroDesktop extends StatelessWidget {
@@ -17,15 +17,18 @@ class IntroDesktop extends StatelessWidget {
           Image.asset('images/Portfolio_Zach.png', width: 600, height: 600)
         ],
       )
-      : Row(
-        mainAxisSize: MainAxisSize.max,
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          const IntroText(),
-          Image.asset('images/Portfolio_Zach.png', width: 600, height: 600)
+      : Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 50),
+        child: Row(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            const IntroText(),
+            Image.asset('images/Portfolio_Zach.png', width: 600, height: 600)
+            
+          ],
           
-        ],
-        
+        ),
       ),
     );
   }

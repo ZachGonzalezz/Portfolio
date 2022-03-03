@@ -13,9 +13,9 @@ class SkillShowcase extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 50),
+      padding: const EdgeInsets.only(top: 0),
       child: SizedBox(
-        height: Responsive.isMobileOs(context) ? height * 1.75 + 200 : height + 200,
+        height: Responsive.isMobileOs(context) ? height * 1.35 + 200 : height + 200,
         width: 600,
         child: Stack(
           children: [
@@ -28,11 +28,12 @@ class SkillShowcase extends StatelessWidget {
                 child: SizedBox(
               width: 500,
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Constants.getText(text: title, fontsize: 50, weight: FontWeight.w800),
                  const SizedBox(
-                    height: 60,
+                    height: 10,
                   ),
                   Responsive.isMobileOs(context) ? 
                   Column(
@@ -79,6 +80,7 @@ class SkillShowcase extends StatelessWidget {
                     children: [
                       Container(
                         width: 600,
+                        
                         decoration: BoxDecoration(
                           color:  const Color(0xFF1D1B34),
                           borderRadius: BorderRadius.circular(20),
@@ -98,6 +100,7 @@ class SkillShowcase extends StatelessWidget {
                         height: height,
                         width: 400,
                         child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: skillLevels.entries.map((e)  {
                             return SkillBar(title: e.key, percent: e.value);
                           }).toList(),

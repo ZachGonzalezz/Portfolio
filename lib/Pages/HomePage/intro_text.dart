@@ -11,6 +11,7 @@ class IntroText extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 50),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:personal_portfolio/Desktop/mixedplate_desktop.dart';
-import 'package:personal_portfolio/Desktop/polaris_showcase.dart';
+import 'package:personal_portfolio/Pages/HomePage/mixedplate_desktop.dart';
+import 'package:personal_portfolio/Pages/HomePage/polaris_showcase.dart';
 import 'package:personal_portfolio/constants.dart';
 import 'package:personal_portfolio/responsive.dart';
 

@@ -45,7 +45,7 @@ class MyStoryDesktop extends StatelessWidget {
                           HeadingWithUnderline(text: 'My Story'),
                           Constants.getText(
                               text:
-                                  'I starting coding in early middle school and instantly fell in love with technology. The pace of innovation is often compared to magic blackbox few understand yet we all depend on it everyday. I hope to make a meaniful difference in the innovation of technology.', fontsize: 30),
+                                  'I starting coding in early middle school and instantly fell in love with technology. The pace of innovation is often compared to magic, which few understand yet we all depend on it everyday. I hope to make a meaningful difference in the world of technology and the lives of everyone.', fontsize: 30),
                     
                         ],
                       ),
@@ -72,7 +72,7 @@ class MyStoryDesktop extends StatelessWidget {
                         HeadingWithUnderline(text: 'My Story'),
                         Constants.getText(
                             text:
-                                'I starting coding in early middle school and instantly fell in love with technology. The pace of innovation is often compared to magic blackbox few understand yet we all depend on it everyday. I hope to make a meaniful difference in the innovation of technology.', fontsize: 30)
+                                'I starting coding in early middle school and instantly fell in love with technology. The pace of innovation is often compared to magic, which few understand yet we all depend on it everyday. I hope to make a meaningful difference in the world of technology and the lives of everyone.', fontsize: 30)
                       ],
                     ),
                   ),

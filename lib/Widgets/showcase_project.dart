@@ -22,12 +22,14 @@ ShowcaseProjectTile({Key? key, required this.image, required this.text, this.isF
           
   Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.center,
             children:
             [
               
               SizedBox(
                 height: 350,
                 child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(height: Responsive.isMobileOs(context) ? 280 : 500, width: 10, color: const Color(0xFF3778F6),),
                     const SizedBox(width: 20,),
@@ -44,6 +46,7 @@ ShowcaseProjectTile({Key? key, required this.image, required this.text, this.isF
 
           : Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
+            
             children: isFlipped ? 
             [
               
@@ -54,7 +57,7 @@ ShowcaseProjectTile({Key? key, required this.image, required this.text, this.isF
                     Container(height: 500, width: 10, color: const Color(0xFF3778F6),),
                     const SizedBox(width: 20,),
                     SizedBox(
-                      width: 300,
+                      width: 330,
                       child: Constants.getText(text: text, fontsize: 25,))
                 ],
                 ),
@@ -70,7 +73,7 @@ ShowcaseProjectTile({Key? key, required this.image, required this.text, this.isF
                     Container(height: 500, width: 10, color: const Color(0xFF3778F6),),
                     SizedBox(width: 20,),
                     SizedBox(
-                      width: 300,
+                      width: 330,
                       child: Constants.getText(text: text, fontsize: 25,))
                 ],
                 ),

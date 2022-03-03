@@ -13,7 +13,7 @@ class Responsive {
       MediaQuery.of(context).size.width >= 1200;
 
   //If is true then user in on mobile app if false user is in browser
-  static bool isMobileOs(BuildContext context) =>  !kIsWeb;
+  static bool isMobileOs(BuildContext context) =>  !kIsWeb || MediaQuery.of(context).size.width < 800;
 
   
 }
