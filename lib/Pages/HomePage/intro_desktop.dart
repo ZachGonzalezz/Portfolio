@@ -15,7 +15,8 @@ class IntroDesktop extends StatelessWidget {
               children: [
                 const IntroText(),
                 Image.asset('images/Portfolio_Zach.png',
-                    width: 600, height: 600)
+                    width: 500, height: 500),
+                const SizedBox(height: 50)
               ],
             )
           : Padding(

@@ -11,7 +11,7 @@ class AboutMeDesktop extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.only(top: Responsive.isMobileOs(context) ? 10 : 100),
       child: SizedBox(
-        height: Responsive.isMobileOs(context) ? 650 : 600,
+        height: Responsive.isMobileOs(context) ? 750 : 600,
         child: Stack(
           children: [
             Positioned.fill(
@@ -25,17 +25,9 @@ class AboutMeDesktop extends StatelessWidget {
                 child: Responsive.isMobileOs(context)
                     ? Column(
                         children: [
-                          Image.asset(
-                            'images/IMG_7410.png',
-                            width: 800,
-                            height: Responsive.isMobileOs(context) ? 175 : 800,
-                          ),
-                          const SizedBox(
-                            height: 50,
-                          ),
                           SizedBox(
                             height: 400,
-                            width: 300,
+                            width: 400,
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -46,6 +38,14 @@ class AboutMeDesktop extends StatelessWidget {
                                     fontsize: 25)
                               ],
                             ),
+                          ),
+                          const SizedBox(
+                            height: 50,
+                          ),
+                          Image.asset(
+                            'images/IMG_7410.png',
+                            width: 800,
+                            height: Responsive.isMobileOs(context) ? 275 : 800,
                           ),
                         ],
                       )

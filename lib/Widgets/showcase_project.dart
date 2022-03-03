@@ -18,7 +18,7 @@ class ShowcaseProjectTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: Responsive.isMobileOs(context)
-          ? const EdgeInsets.all(10)
+          ? const EdgeInsets.all(40)
           : const EdgeInsets.fromLTRB(200, 50, 200, 50),
       child: Container(
         decoration: BoxDecoration(
@@ -46,7 +46,7 @@ class ShowcaseProjectTile extends StatelessWidget {
                               width: 20,
                             ),
                             SizedBox(
-                                width: 300,
+                                width: 350,
                                 child: Constants.getText(
                                   text: text,
                                   fontsize: 25,
