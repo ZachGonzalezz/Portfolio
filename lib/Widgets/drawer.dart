@@ -19,6 +19,9 @@ class DrawerMenu extends StatelessWidget {
       ),
       child: Column(
         children: [
+          const SizedBox(
+            height: 30,
+          ),
           TopBarTextButton(title: 'Home', url: '/'),
           TopBarTextButton(title: 'My Story', url: '/mystory'),
           TopBarTextButton(title: 'Awards', url: '/myawards'),

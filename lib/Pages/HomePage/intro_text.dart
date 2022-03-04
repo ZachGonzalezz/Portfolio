@@ -12,13 +12,15 @@ class IntroText extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 50),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment:Responsive.isMobile(context) ? CrossAxisAlignment.center : CrossAxisAlignment.start,
         children: [
           Constants.getText(
               text: 'Hello, my name is',
+              alignment: Responsive.isMobile(context) ? TextAlign.center : null,
               fontsize: Responsive.isBigDesktop(context) ? 60 : 30),
           Constants.getText(
               text: 'Zachary Gonzalez',
+              alignment: Responsive.isMobile(context) ? TextAlign.center : null,
               height: Responsive.isMobile(context) ? 1.1 : 1.5,
               fontsize: Responsive.isBigDesktop(context) ? 90 : 60,
               weight: FontWeight.w900),

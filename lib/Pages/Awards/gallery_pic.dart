@@ -77,7 +77,8 @@ class _GalleryPictureState extends State<GalleryPicture> {
                 child: Stack(
                   children: [
                     Image.asset(
-                      'images/awards/AwardsGallery' + widget.url + '.png',
+                     Responsive.isMobileOs(context)
+                          ? 'images/awards/AwardsGallery' + widget.url + '_Mobile' + '.png' : 'images/awards/AwardsGallery' + widget.url + '.png',
                       height: widget.height,
                       width: Responsive.isMobileOs(context)
                           ? MediaQuery.of(context).size.width / 1.2

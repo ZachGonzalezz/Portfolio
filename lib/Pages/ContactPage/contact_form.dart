@@ -16,7 +16,7 @@ class ContactForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: Responsive.isMobileOs(context)
-          ? EdgeInsets.all(10)
+          ? EdgeInsets.all(30)
           : Responsive.isSuperBigDesktop(context)
               ? EdgeInsets.symmetric(horizontal: 400)
               : Responsive.isBigDesktop(context)
@@ -94,32 +94,13 @@ calendly.com/zacharygonzalez1234
                         Padding(
                           padding: const EdgeInsets.all(12.0),
                           child: TextButton(
-                              onPressed: () async {
-                                final url = Uri.parse(
-                                    'https://api.emailjs.com/api/v1.0/email/send');
-                                http.post(url,
-                                    headers: {
-                                      'Content-Type': 'application/json'
-                                    },
-                                    body: json.encode({
-                                      'service_id': 'service_8i2t9k6',
-                                      'template_id': 'template_bs3agmp',
-                                      'user_id': '_C0OzKdSlnQXQihKP',
-                                      'template_params': {
-                                        'user_name': name.text +
-                                            ' from email: ' +
-                                            email.text,
-                                        'user_email': email.text,
-                                        'user_subject': subject.text,
-                                        'user_message': messageController.text,
-                                      }
-                                    }));
+                              onPressed: () {
+                                sumbit(context);
                               },
                               child: Container(
-                                 decoration: BoxDecoration(
-                                    color: const Color(0xFF3778F6),
-                                    borderRadius: BorderRadius.circular(10)
-                                 ),
+                                  decoration: BoxDecoration(
+                                      color: const Color(0xFF3778F6),
+                                      borderRadius: BorderRadius.circular(10)),
                                   child: Padding(
                                     padding: EdgeInsets.all(12),
                                     child: Constants.getText(
@@ -160,34 +141,16 @@ calendly.com/zacharygonzalez1234
                         Padding(
                           padding: const EdgeInsets.all(12.0),
                           child: TextButton(
-                              onPressed: () async {
-                                final url = Uri.parse(
-                                    'https://api.emailjs.com/api/v1.0/email/send');
-                                http.post(url,
-                                    headers: {
-                                      'Content-Type': 'application/json'
-                                    },
-                                    body: json.encode({
-                                      'service_id': 'service_8i2t9k6',
-                                      'template_id': 'template_bs3agmp',
-                                      'user_id': '_C0OzKdSlnQXQihKP',
-                                      'template_params': {
-                                        'user_name': name.text +
-                                            ' from email: ' +
-                                            email.text,
-                                        'user_email': email.text,
-                                        'user_subject': subject.text,
-                                        'user_message': messageController.text,
-                                      }
-                                    }));
+                              onPressed: () {
+                                sumbit(context);
                               },
                               child: Container(
-                                   decoration: BoxDecoration(
-                                    color: const Color(0xFF3778F6),
-                                    borderRadius: BorderRadius.circular(10)
-                                 ),
+                                  decoration: BoxDecoration(
+                                      color: const Color(0xFF3778F6),
+                                      borderRadius: BorderRadius.circular(10)),
                                   child: Padding(
-                                    padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                                    padding: const EdgeInsets.fromLTRB(
+                                        20, 10, 20, 10),
                                     child: Constants.getText(
                                         text: 'Submit',
                                         fontsize: 30,
@@ -273,5 +236,80 @@ calendly.com/zacharygonzalez1234
         ),
       ),
     );
+  }
+
+  void sumbit(BuildContext context) {
+    if (messageController.text.isNotEmpty &&
+        subject.text.isNotEmpty &&
+        name.text.isNotEmpty &&
+        email.text.isNotEmpty) {
+      final url = Uri.parse('https://api.emailjs.com/api/v1.0/email/send');
+      http.post(url,
+          headers: {'Content-Type': 'application/json'},
+          body: json.encode({
+            'service_id': 'service_8i2t9k6',
+            'template_id': 'template_bs3agmp',
+            'user_id': '_C0OzKdSlnQXQihKP',
+            'template_params': {
+              'user_name': name.text + ' from email: ' + email.text,
+              'user_email': email.text,
+              'user_subject': subject.text,
+              'user_message': messageController.text,
+            }
+          }));
+      clearTextFields();
+    } else {
+      showPopUp(context);
+    }
+  }
+
+  void clearTextFields() {
+    messageController.text = '';
+    name.text = '';
+    email.text = '';
+    subject.text = '';
+  }
+
+  void showPopUp(BuildContext context) {
+    showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+              backgroundColor: const Color(0xFF1D1B34),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(32.0))),
+              title: Center(
+                  child: Constants.getText(
+                      text: 'Incomplete',
+                      alignment: TextAlign.center,
+                      fontsize: 30,
+                      weight: FontWeight.w800)),
+              content: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Constants.getText(
+                      text: 'Make sure you put your name email subject message',
+                      alignment: TextAlign.center,
+                      fontsize: 30),
+                  const SizedBox(
+                    height: 50,
+                  ),
+                  TextButton(
+                      onPressed: () {
+                        sumbit(context);
+                      },
+                      child: Container(
+                          decoration: BoxDecoration(
+                              color: const Color(0xFF3778F6),
+                              borderRadius: BorderRadius.circular(10)),
+                          child: Padding(
+                            padding: EdgeInsets.all(12),
+                            child: Constants.getText(
+                                text: 'Okay',
+                                fontsize: 30,
+                                weight: FontWeight.bold),
+                          ))),
+                ],
+              ),
+            ));
   }
 }

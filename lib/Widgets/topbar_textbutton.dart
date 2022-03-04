@@ -11,7 +11,7 @@ class TopBarTextButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
+      padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
       child: TextButton(
 
         child: Constants.getText(text: title, fontsize: 22, weight: FontWeight.w800),
