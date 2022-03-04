@@ -10,12 +10,14 @@ class SkillShowcase extends StatelessWidget {
       required this.title,
       required this.subtitle,
       required this.skillLevels,
-      required this.height})
+      required this.height,
+      this.spaceBetweenTitleAndBody = 10})
       : super(key: key);
   String title;
   String subtitle;
   String paragraph;
   double height;
+  double spaceBetweenTitleAndBody;
   Map<String, double> skillLevels;
   @override
   Widget build(BuildContext context) {
@@ -23,7 +25,7 @@ class SkillShowcase extends StatelessWidget {
       padding: const EdgeInsets.only(top: 0),
       child: SizedBox(
         height:
-            Responsive.isMobileOs(context) ? height * 1.35 + 200 : height + 200,
+            Responsive.isMobileOs(context) ? height * 2.15  : height + 200,
         width: 600,
         child: Stack(
           children: [
@@ -43,8 +45,8 @@ class SkillShowcase extends StatelessWidget {
                       text: title,
                       fontsize: Responsive.isBigDesktop(context) ? 60 : 40,
                       weight: FontWeight.w800),
-                  const SizedBox(
-                    height: 10,
+                   SizedBox(
+                    height: Responsive.isMobileOs(context) ? 50 : spaceBetweenTitleAndBody,
                   ),
                   Responsive.isMobileOs(context)
                       ? Column(
@@ -54,7 +56,7 @@ class SkillShowcase extends StatelessWidget {
                           children: [
                             Padding(
                               padding:
-                                  const EdgeInsets.symmetric(horizontal: 12),
+                                  const EdgeInsets.symmetric(horizontal: 20),
                               child: Container(
                                 width: 600,
                                 decoration: BoxDecoration(
@@ -62,11 +64,12 @@ class SkillShowcase extends StatelessWidget {
                                   borderRadius: BorderRadius.circular(20),
                                 ),
                                 child: Padding(
-                                  padding: const EdgeInsets.all(40.0),
+                                  padding: const EdgeInsets.all(25.0),
                                   child: Column(
                                     children: [
                                       Constants.getText(
                                           text: subtitle,
+                                          alignment: TextAlign.center,
                                           fontsize: 30,
                                           weight: FontWeight.w800),
                                       const SizedBox(
@@ -120,9 +123,9 @@ class SkillShowcase extends StatelessWidget {
                                     Constants.getText(
                                         text: paragraph,
                                         fontsize:
-                                            Responsive.isBigDesktop(context)
-                                                ? 30
-                                                : 20),
+                                          Responsive.isBigDesktop(context)
+                                        ? 31
+                                        : 25),
                                   ],
                                 ),
                               ),

@@ -16,7 +16,7 @@ class SkillBar extends StatelessWidget {
             ? 600
             : 400;
     return Padding(
-      padding: const EdgeInsets.only(top: 20),
+      padding: const EdgeInsets.only(top: 10),
       child: SizedBox(
         width: Responsive.isBigDesktop(context) ? 750 : 500,
         height: 100,
@@ -25,7 +25,7 @@ class SkillBar extends StatelessWidget {
           children: [
             Constants.getText(
                 text: title,
-                fontsize: 30,
+                fontsize: Responsive.isMobileOs(context) ? 25 : 30,
                 weight: FontWeight.w700,
                 alignment: TextAlign.left),
             const SizedBox(

@@ -50,27 +50,30 @@ class AwardShowcase extends StatelessWidget {
                   : const SizedBox(),
             ],
           )
-        : Row(
-            children: [
-              Column(
-                children: images
-                    .map((e) => Image.asset(
-                          'images/awards/AwardsGallery' + e + '.png',
-                          width: MediaQuery.of(context).size.width / 2,
-                        ))
-                    .toList(),
-              ),
-              SizedBox(
-                width: MediaQuery.of(context).size.width / 2.5,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    HeadingWithUnderline(text: title),
-                    Constants.getText(text: text, fontsize: 30)
-                  ],
+        : Padding(
+          padding: const EdgeInsets.all(30.0),
+          child: Row(
+              children: [
+                Column(
+                  children: images
+                      .map((e) => Image.asset(
+                            'images/awards/AwardsGallery' + e + '.png',
+                            width: MediaQuery.of(context).size.width / 2,
+                          ))
+                      .toList(),
                 ),
-              )
-            ],
-          );
+                SizedBox(
+                  width: MediaQuery.of(context).size.width / 2.5,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      HeadingWithUnderline(text: title),
+                      Constants.getText(text: text, fontsize: 30)
+                    ],
+                  ),
+                )
+              ],
+            ),
+        );
   }
 }

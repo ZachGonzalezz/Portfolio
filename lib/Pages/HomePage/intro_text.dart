@@ -19,8 +19,9 @@ class IntroText extends StatelessWidget {
               fontsize: Responsive.isBigDesktop(context) ? 60 : 30),
           Constants.getText(
               text: 'Zachary Gonzalez',
+              height: Responsive.isMobile(context) ? 1.1 : 1.5,
               fontsize: Responsive.isBigDesktop(context) ? 90 : 60,
-              weight: FontWeight.w700),
+              weight: FontWeight.w900),
           Align(
             alignment: Alignment.centerLeft,
             child: Container(
@@ -33,34 +34,59 @@ class IntroText extends StatelessWidget {
             height: 20,
           ),
           RichText(
-            textAlign: TextAlign.left,
+            textAlign: Responsive.isMobile(context) ? TextAlign.center : TextAlign.left,
             text: TextSpan(
               children: <TextSpan>[
                 TextSpan(
                     text: 'Software Developer',
                     style: GoogleFonts.manrope(
+                      
                         fontWeight: FontWeight.bold,
                         color: const Color(0xFF2B5AB8),
-                        fontSize: Responsive.isBigDesktop(context) ? 50 : 30)),
+                        fontSize: Responsive.isBigDesktop(context) ? 50 : Responsive.isMobileOs(context) ? 25 :  30)),
                 TextSpan(
                     text: ' and Entreprenuer',
                     style: GoogleFonts.manrope(
                         color: Colors.white,
-                        fontSize: Responsive.isBigDesktop(context) ? 50 : 30)),
+                        fontSize: Responsive.isBigDesktop(context) ? 50 : Responsive.isMobileOs(context) ? 25 :  30)),
               ],
             ),
           ),
           Constants.getText(
               text: 'based in the Vegas area',
-              alignment: TextAlign.left,
-              fontsize: Responsive.isBigDesktop(context) ? 50 : 30),
+              alignment: Responsive.isMobile(context) ? TextAlign.center : TextAlign.left,
+              fontsize: Responsive.isBigDesktop(context) ? 50 : Responsive.isMobileOs(context) ? 25 :  30),
           const SizedBox(
             height: 20,
           ),
           const SizedBox(
             height: 20,
           ),
-          Padding(
+          
+          Responsive.isMobileOs(context) ? 
+          Center(
+            child: Padding(
+              padding:
+                  EdgeInsets.only(left: Responsive.isMobileOs(context) ? 0 : 100),
+              child: TextButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/contact');
+                  },
+                  child: Container(
+                      decoration: BoxDecoration(
+                          color: const Color(0xFF3778F6),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Padding(
+                        padding: const EdgeInsets.fromLTRB(20, 12, 20, 12),
+                        child: Constants.getText(
+                            text: 'Contact',
+                            weight: FontWeight.w800,
+                            fontsize: Responsive.isBigDesktop(context) ? 70 : 40),
+                      ))),
+            ),
+          )
+          
+          : Padding(
             padding:
                 EdgeInsets.only(left: Responsive.isMobileOs(context) ? 0 : 100),
             child: TextButton(
@@ -72,7 +98,7 @@ class IntroText extends StatelessWidget {
                         color: const Color(0xFF3778F6),
                         borderRadius: BorderRadius.circular(10)),
                     child: Padding(
-                      padding: const EdgeInsets.all(12.0),
+                      padding: const EdgeInsets.fromLTRB(20, 12, 20, 12),
                       child: Constants.getText(
                           text: 'Contact',
                           weight: FontWeight.w800,

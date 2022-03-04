@@ -37,7 +37,7 @@ class FooterDesktop extends StatelessWidget {
                            TextButton(
                             onPressed: () {
                                  String url =
-                                  'https://polaristech.tech/howto/ResumeProfessional.pdf';
+                                  'http://zacharygonzalez.me/resume/Resume.pdf';
                               if(Responsive.isMobileOs(context)){
                                 launch(url);
                               }

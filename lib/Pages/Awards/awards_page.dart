@@ -15,6 +15,9 @@ class AwardsPage extends StatelessWidget {
         children: const [
          TopBarDesktop(),
          Gallery(),
+         SizedBox(
+           height: 100,
+         ),
            FooterDesktop()
         ]
       ),

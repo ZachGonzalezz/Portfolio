@@ -8,12 +8,14 @@ class Constants {
       String text = '',
       Color color = Colors.white,
       TextAlign? alignment,
-      bool isUnderline = false}) {
+      bool isUnderline = false,
+      double height = 1.5}) {
     return Text(
       text,
       style: GoogleFonts.manrope(
           fontSize: fontsize,
           fontWeight: weight,
+          height:  height,
           color: color,
           decoration: isUnderline ? TextDecoration.underline : null),
       textAlign: alignment,

@@ -20,8 +20,9 @@ class MyStoryPage extends StatelessWidget {
             SkillShowcase(
             title: 'Other Skills',
             subtitle: 'More About Me:',
+            spaceBetweenTitleAndBody: 50,
             paragraph:
-                'As someone who has ran their own app startup I learned to wear a few hats. I picked up video editing while making an app platform of which has video content on it. Since then I run a Youtube channel on the side to help teach and spread my knowledge. Sadly, as a logistical person Photoshop is the closest thing I will get to art, but as a geek at heart the Web3 movement is something that fascinates me. I spend a lot of time looking into Blockchains, Cryptos, NFTs, and more.',
+                'As someone who has ran their own app startup I learned to wear a few hats. I picked up video editing while making an app platform of which has video content on it. Since then I run a Youtube channel on the side to help teach and spread my knowledge. \n\nSadly, as a logistical person Photoshop is the closest thing I will get to art, but as a geek at heart the Web3 movement is something that fascinates me. I spend a lot of time looking into Blockchains, Cryptos, NFTs, and more.',
             skillLevels: const {
               'Adobe Premire Pro' : 0.8,
               'Adobe Photoshop' : 0.6,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:personal_portfolio/Widgets/download_app_button.dart';
 import 'package:personal_portfolio/Widgets/showcase_project.dart';
 
 class PolarisShowcaseDesktop extends StatelessWidget {
@@ -28,6 +29,24 @@ Polaris allows students to explore their interests through tracking your likes a
 In 2022 you can buy a TV from your couch, order a pizza, but finding your next career mentor is much harder. Polaris made conencting and interacting with the mentors in your community easy.
 ''',
             isFilled: true),
+         ShowcaseProjectTile(
+            image: 'images/TechStack.png',
+            isFlipped: true,
+            text: '''
+The app and website are both written in Dart using the Flutter framework. The backend uses Firebase and Cloud Run. Notifications are handeled through listeners on Cloud Functions. I used Android Studio and Visual Studio Code as my IDE.
+''',
+            isFilled: true),            
+        
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+DownloadAppButton(url: 'https://apps.apple.com/us/app/polaristech/id1585714413', buttonText: 'Apple'),
+DownloadAppButton(url: 'https://play.google.com/store/apps/details?id=zacharygonzalez.com.mentor', buttonText: 'Android'),
+DownloadAppButton(url: 'https://polaristech.tech/', buttonText: 'Website'),
+          ],
+        ),
+        
+        
       ],
     );
   }

@@ -18,7 +18,7 @@ class ShowcaseProjectTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: Responsive.isMobileOs(context)
-          ? const EdgeInsets.all(40)
+          ? const EdgeInsets.all(30)
           : const EdgeInsets.fromLTRB(200, 50, 200, 50),
       child: Container(
         decoration: BoxDecoration(
@@ -31,22 +31,23 @@ class ShowcaseProjectTile extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
+                      Center(child: Image.asset(image, width: 450, height: 300)),
                       SizedBox(
-                        height: 350,
+                        height: Responsive.isMobileOs(context) ? 540 : 350,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Container(
+                            Responsive.isMobileOs(context) ? const SizedBox() : Container(
                               height:
                                   Responsive.isMobileOs(context) ? 280 : 500,
                               width: 10,
                               color: const Color(0xFF3778F6),
                             ),
-                            const SizedBox(
+                            Responsive.isMobileOs(context) ? const SizedBox() : const SizedBox(
                               width: 20,
                             ),
                             SizedBox(
-                                width: 350,
+                                width: Responsive.isMobileOs(context) ? 250 : 350,
                                 child: Constants.getText(
                                   text: text,
                                   fontsize: 25,
@@ -54,7 +55,7 @@ class ShowcaseProjectTile extends StatelessWidget {
                           ],
                         ),
                       ),
-                      Image.asset(image, width: 450, height: 450),
+                    
                     ])
               : Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,

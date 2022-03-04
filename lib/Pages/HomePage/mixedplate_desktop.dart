@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:personal_portfolio/Widgets/download_app_button.dart';
 import 'package:personal_portfolio/Widgets/showcase_project.dart';
 
 class MixedPlateShowcaseDesktop extends StatelessWidget {
@@ -29,6 +30,14 @@ Amazingly in 2022 they did everything by hand. I made them a website that would 
 The real world is not a static web page and so this website accounts for that. Everything from the number of games to number of divisions is customizable, allowing for a flexible real world enviroment.
 ''',
             isFilled: true),
+             ShowcaseProjectTile(
+            image: 'images/TechStack.png',
+            isFlipped: true,
+            text: '''
+The website is written in Dart using the Flutter framework. The backend uses Firebase. I used Android Studio and Visual Studio Code as my IDE. The wireframing and prototyping was done in Figma. The website is hosted on Hostinger.
+''',
+            isFilled: true),   
+            DownloadAppButton(url: 'http://mixedplate.net/#/', buttonText: 'Website'),
       ],
     );
   }

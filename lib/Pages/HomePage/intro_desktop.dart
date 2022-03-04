@@ -15,13 +15,13 @@ class IntroDesktop extends StatelessWidget {
               children: [
                 const IntroText(),
                 Image.asset('images/Portfolio_Zach.png',
-                    width: 500, height: 500),
+                    width: Responsive.isMobileOs(context) ? 320 : 500, height: 400),
                 const SizedBox(height: 50)
               ],
             )
           : Padding(
               padding: EdgeInsets.symmetric(
-                  horizontal: Responsive.isSuperBigDesktop(context) ? 250 : 50),
+                  horizontal: Responsive.isSuperBigDesktop(context) ? 250 : 80),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,

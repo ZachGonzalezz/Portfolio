@@ -11,7 +11,7 @@ class MyStoryDesktop extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.only(top: Responsive.isMobile(context) ? 0 : 100),
       child: SizedBox(
-        height: Responsive.isMobile(context) ? 1300 : 600,
+        height: Responsive.isMobile(context) ? 1400 : 600,
         width: 300,
         child: Stack(
           children: [
@@ -36,7 +36,7 @@ class MyStoryDesktop extends StatelessWidget {
                             height: 600,
                           ),
                           SizedBox(
-                            height: 600,
+                            height: 800,
                             width: 500,
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -52,32 +52,35 @@ class MyStoryDesktop extends StatelessWidget {
                         ],
                       ),
                     )
-                  : Row(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Image.asset(
-                          'images/IMG_3056 1.png',
-                          width: 600,
-                          height: 600,
-                        ),
-                        SizedBox(
-                          height: 600,
-                          width:
-                              Responsive.isSuperBigDesktop(context) ? 900 : 500,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              HeadingWithUnderline(text: 'My Story'),
-                              Constants.getText(
-                                  text:
-                                      'I starting coding in early middle school and instantly fell in love with technology. The pace of innovation is often compared to magic, which few understand yet we all depend on it everyday. I hope to make a meaningful difference in the world of technology and the lives of everyone.',
-                                  fontsize: 30)
-                            ],
+                  : Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 50),
+                    child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Image.asset(
+                            'images/IMG_3056 1.png',
+                            width: 600,
+                            height: 600,
                           ),
-                        ),
-                      ],
-                    ),
+                          SizedBox(
+                            height: 600,
+                            width:
+                                Responsive.isSuperBigDesktop(context) ? 900 : 500,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                HeadingWithUnderline(text: 'My Story'),
+                                Constants.getText(
+                                    text:
+                                        'I starting coding in early middle school and instantly fell in love with technology. The pace of innovation is often compared to magic, which few understand yet we all depend on it everyday. I hope to make a meaningful difference in the world of technology and the lives of everyone.',
+                                    fontsize: 30)
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                  ),
             ))
           ],
         ),

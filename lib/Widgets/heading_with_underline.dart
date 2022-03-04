@@ -13,11 +13,11 @@ class HeadingWithUnderline extends StatelessWidget {
       children: [
         Constants.getText(
             text: text,
-            weight: FontWeight.w700,
+            weight: FontWeight.w900,
             fontsize: Responsive.isBigDesktop(context) ? 60 : 40,
             alignment: TextAlign.left),
         const SizedBox(
-          height: 20,
+          height: 5,
         ),
         Container(
           width: 100,

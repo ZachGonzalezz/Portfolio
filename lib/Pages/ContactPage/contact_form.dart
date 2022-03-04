@@ -27,7 +27,7 @@ class ContactForm extends StatelessWidget {
             borderRadius: BorderRadius.circular(20),
             color: const Color(0xFF1D1B34)),
         child: Padding(
-          padding: const EdgeInsets.all(24.0),
+          padding: const EdgeInsets.all(40.0),
           child: Responsive.isMobileOs(context)
               ? Column(
                   children: [
@@ -116,7 +116,10 @@ calendly.com/zacharygonzalez1234
                                     }));
                               },
                               child: Container(
-                                  color: Color(0xFF6B7FEA),
+                                 decoration: BoxDecoration(
+                                    color: const Color(0xFF3778F6),
+                                    borderRadius: BorderRadius.circular(10)
+                                 ),
                                   child: Padding(
                                     padding: EdgeInsets.all(12),
                                     child: Constants.getText(
@@ -179,9 +182,12 @@ calendly.com/zacharygonzalez1234
                                     }));
                               },
                               child: Container(
-                                  color: Color(0xFF6B7FEA),
+                                   decoration: BoxDecoration(
+                                    color: const Color(0xFF3778F6),
+                                    borderRadius: BorderRadius.circular(10)
+                                 ),
                                   child: Padding(
-                                    padding: EdgeInsets.all(12),
+                                    padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
                                     child: Constants.getText(
                                         text: 'Submit',
                                         fontsize: 30,

@@ -11,44 +11,50 @@ class AboutMeDesktop extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.only(top: Responsive.isMobileOs(context) ? 10 : 100),
       child: SizedBox(
-        height: Responsive.isMobileOs(context) ? 750 : 600,
+        height: Responsive.isMobileOs(context) ? 700 : 600,
         child: Stack(
           children: [
             Positioned.fill(
-                child: Image.asset(
+                child: Padding(
+                  padding: Responsive.isMobileOs(context) ? EdgeInsets.only(bottom: 300) : EdgeInsets.zero,
+                  child: Image.asset(
               'images/CurveLine2.png',
               width: MediaQuery.of(context).size.width,
-            )),
+            ),
+                )),
             Positioned.fill(
               child: SizedBox(
                 width: 500,
                 child: Responsive.isMobileOs(context)
-                    ? Column(
-                        children: [
-                          SizedBox(
-                            height: 400,
-                            width: 400,
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                HeadingWithUnderline(text: 'About Me'),
-                                Constants.getText(
-                                    text:
-                                        'I am a young developer aspiring to build innovative apps and software to find solutions to modern-day problems and to better improve the lives of those around me.',
-                                    fontsize: 25)
-                              ],
+                    ? Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 40),
+                      child: Column(
+                          children: [
+                            SizedBox(
+                              height: 400,
+                              width: 400,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  HeadingWithUnderline(text: 'About Me'),
+                                  Constants.getText(
+                                      text:
+                                          'I am a young developer aspiring to build innovative apps and software to find solutions to modern-day problems and to better improve the lives of those around me.',
+                                      fontsize: 25)
+                                ],
+                              ),
                             ),
-                          ),
-                          const SizedBox(
-                            height: 50,
-                          ),
-                          Image.asset(
-                            'images/IMG_7410.png',
-                            width: 800,
-                            height: Responsive.isMobileOs(context) ? 275 : 800,
-                          ),
-                        ],
-                      )
+                            const SizedBox(
+                              height: 0,
+                            ),
+                            Image.asset(
+                              'images/IMG_7410.png',
+                              width: Responsive.isMobileOs(context) ? 275 : 800,
+                              height: Responsive.isMobileOs(context) ? 275 : 800,
+                            ),
+                          ],
+                        ),
+                    )
                     : Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
