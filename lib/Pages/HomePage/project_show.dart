@@ -17,7 +17,13 @@ class ProjectShow extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       child: Padding(
-        padding: Responsive.isMobileOs(context) ? const EdgeInsets.all(30)  : const EdgeInsets.fromLTRB(270, 50, 270, 50),
+        padding: Responsive.isMobileOs(context)
+            ? const EdgeInsets.all(30)
+            : Responsive.isSuperBigDesktop(context)
+                ? const EdgeInsets.fromLTRB(770, 50, 770, 50)
+                : Responsive.isBigDesktop(context)
+                    ? const EdgeInsets.fromLTRB(570, 50, 570, 50)
+                    : const EdgeInsets.fromLTRB(270, 50, 270, 50),
         child: Container(
             decoration: BoxDecoration(
                 color: const Color(0xFF1D1B34),
@@ -25,7 +31,9 @@ class ProjectShow extends StatelessWidget {
             child: Column(
               children: [
                 Padding(
-                  padding: Responsive.isMobileOs(context) ? EdgeInsets.symmetric(horizontal: 20): EdgeInsets.zero,
+                  padding: Responsive.isMobileOs(context)
+                      ? EdgeInsets.symmetric(horizontal: 20)
+                      : EdgeInsets.zero,
                   child: Image.asset(
                     imageUrl,
                     height: 300,
@@ -44,32 +52,35 @@ class ProjectShow extends StatelessWidget {
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 30),
-                  child: Constants.getText(text: text, fontsize: Responsive.isBigDesktop(context)
-                                        ? 31
-                                        : 25, alignment: TextAlign.center),
+                  child: Constants.getText(
+                      text: text,
+                      fontsize: Responsive.isBigDesktop(context) ? 31 : 25,
+                      alignment: TextAlign.center),
                 ),
                 const SizedBox(
                   height: 20,
                 ),
                 TextButton(
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => ShowProjectScreen(nameOfProject: projectName)));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ShowProjectScreen(
+                                  nameOfProject: projectName)));
                     },
                     child: Container(
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8),
-                        color: const Color(0xFF3778F6)
-                      ),
+                          borderRadius: BorderRadius.circular(8),
+                          color: const Color(0xFF3778F6)),
                       child: Padding(
                         padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
                         child: Constants.getText(
-                              text: 'Learn More',
-                              fontsize: 30,
-                              weight: FontWeight.w700),
+                            text: 'Learn More',
+                            fontsize: 30,
+                            weight: FontWeight.w700),
                       ),
                     )),
-
-                  const SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
               ],

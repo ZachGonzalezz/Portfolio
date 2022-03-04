@@ -19,7 +19,11 @@ class ShowcaseProjectTile extends StatelessWidget {
     return Padding(
       padding: Responsive.isMobileOs(context)
           ? const EdgeInsets.all(30)
-          : const EdgeInsets.fromLTRB(200, 50, 200, 50),
+          : Responsive.isSuperBigDesktop(context)
+              ? const EdgeInsets.fromLTRB(500, 50, 500, 50)
+              : Responsive.isBigDesktop(context)
+                  ? const EdgeInsets.fromLTRB(300, 50, 300, 50)
+                  : const EdgeInsets.fromLTRB(200, 50, 200, 50),
       child: Container(
         decoration: BoxDecoration(
             color: isFilled ? const Color(0xFF1D1B34) : null,
@@ -31,23 +35,30 @@ class ShowcaseProjectTile extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                      Center(child: Image.asset(image, width: 450, height: 300)),
+                      Center(
+                          child: Image.asset(image, width: 450, height: 300)),
                       SizedBox(
                         height: Responsive.isMobileOs(context) ? 540 : 350,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Responsive.isMobileOs(context) ? const SizedBox() : Container(
-                              height:
-                                  Responsive.isMobileOs(context) ? 280 : 500,
-                              width: 10,
-                              color: const Color(0xFF3778F6),
-                            ),
-                            Responsive.isMobileOs(context) ? const SizedBox() : const SizedBox(
-                              width: 20,
-                            ),
+                            Responsive.isMobileOs(context)
+                                ? const SizedBox()
+                                : Container(
+                                    height: Responsive.isMobileOs(context)
+                                        ? 280
+                                        : 500,
+                                    width: 10,
+                                    color: const Color(0xFF3778F6),
+                                  ),
+                            Responsive.isMobileOs(context)
+                                ? const SizedBox()
+                                : const SizedBox(
+                                    width: 20,
+                                  ),
                             SizedBox(
-                                width: Responsive.isMobileOs(context) ? 250 : 350,
+                                width:
+                                    Responsive.isMobileOs(context) ? 250 : 350,
                                 child: Constants.getText(
                                   text: text,
                                   fontsize: 25,
@@ -55,7 +66,6 @@ class ShowcaseProjectTile extends StatelessWidget {
                           ],
                         ),
                       ),
-                    
                     ])
               : Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,

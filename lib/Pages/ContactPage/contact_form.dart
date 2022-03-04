@@ -16,12 +16,12 @@ class ContactForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: Responsive.isMobileOs(context)
-          ? EdgeInsets.all(30)
+          ? const EdgeInsets.all(30)
           : Responsive.isSuperBigDesktop(context)
-              ? EdgeInsets.symmetric(horizontal: 400)
+              ? const EdgeInsets.fromLTRB(400, 100, 400, 100)
               : Responsive.isBigDesktop(context)
-                  ? EdgeInsets.symmetric(horizontal: 300)
-                  : EdgeInsets.fromLTRB(200, 30, 200, 30),
+                  ? const EdgeInsets.fromLTRB(300, 100, 300, 100)
+                  : const EdgeInsets.fromLTRB(200, 30, 200, 30),
       child: Container(
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
