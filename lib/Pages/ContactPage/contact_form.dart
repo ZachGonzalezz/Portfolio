@@ -271,9 +271,10 @@ calendly.com/zacharygonzalez1234
   }
 
   void showPopUp(BuildContext context) {
-    showDialog(
-        context: context,
-        builder: (context) => AlertDialog(
+    Future.delayed(Duration(seconds: 0));
+    WidgetsBinding.instance!.addPostFrameCallback((_) => showDialog(
+        context: context, builder: (context) {
+   return AlertDialog(
               backgroundColor: const Color(0xFF1D1B34),
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(Radius.circular(32.0))),
@@ -310,6 +311,7 @@ calendly.com/zacharygonzalez1234
                           ))),
                 ],
               ),
-            ));
+            );
+         } ));
   }
 }
