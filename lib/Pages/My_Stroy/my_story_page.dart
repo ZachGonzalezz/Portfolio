@@ -44,14 +44,15 @@ GuardFlow was very first app I started coding when I was 16. Before I beat aroun
         ShowcaseProjectTile(
           image: 'images/Mask Group-2.png',
           text: '''
-Instead of hiding my failures I want to tell you about mine. I had this cool never before seen idea. When I was working as a lifeguard we had a horrible clock in app it always failed. My solution build a better one! No experience building apps because why not!''',
+Instead of hiding my failures I want to share mine. I had this never before seen idea! While I was working as a lifeguard we had this horrible clock in app and it always failed. My solution was to create a new one! No knowledge or experience and I dove in head first because why not.
+''',
           isFilled: true,
           isFlipped: true,
         ),
         ShowcaseProjectTile(
             image: 'images/Mask Group-1.png',
             text: '''
-What went wrong? Pretty much everything is the short answer! This was before I knew what user experience was and before I met a designer.\n(if you could not tell) 
+What went wrong? The short answer is everything. This was before I knew what user experience was and before I met a designer \n(if you could not tell)
 ''',
             isFilled: true),
         FooterDesktop()

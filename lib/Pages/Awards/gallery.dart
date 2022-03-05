@@ -16,7 +16,7 @@ class Gallery extends StatelessWidget {
                     height: Responsive.isMobileOs(context)
           ?  300 : 600,
                     url: '1',
-                    title: 'Presentation To Programmer Meetup',
+                    title: 'presentation at Programmer Meetup',
                     body:
                         'I had the honor to speak at Joshua Copeland\'s Las Vegas Programmer meetup. I was given the opprotunity to share my app idea Polaris to an audience full of experienced programmers.'),
                 GalleryPicture(
@@ -79,7 +79,7 @@ class Gallery extends StatelessWidget {
                         GalleryPicture(
                             height: 600,
                             url: '1',
-                            title: 'Presentation at Programmer Meetup',
+                            title: 'presentation at Programmer Meetup',
                             body:
                                 'I had the honor to speak at Joshua Copeland\'s Las Vegas Programmer meetup. I was given the opprotunity to share my app idea Polaris to an audience full of experienced programmers.'),
                         GalleryPicture(

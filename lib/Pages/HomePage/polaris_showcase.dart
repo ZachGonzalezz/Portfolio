@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:personal_portfolio/Widgets/download_app_button.dart';
 import 'package:personal_portfolio/Widgets/showcase_project.dart';
+import 'package:personal_portfolio/responsive.dart';
 
 class PolarisShowcaseDesktop extends StatelessWidget {
   const PolarisShowcaseDesktop({Key? key}) : super(key: key);
@@ -37,6 +38,15 @@ The app and website are both written in Dart using the Flutter framework. The ba
 ''',
             isFilled: true),            
         
+       Responsive.isMobileOs(context) ? 
+       Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+DownloadAppButton(url: 'https://apps.apple.com/us/app/polaristech/id1585714413', buttonText: 'Apple'),
+DownloadAppButton(url: 'https://play.google.com/store/apps/details?id=zacharygonzalez.com.mentor', buttonText: 'Android'),
+DownloadAppButton(url: 'https://polaristech.tech/', buttonText: 'Website'),
+          ],
+        ) :
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
