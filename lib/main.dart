@@ -4,8 +4,10 @@ import 'package:personal_portfolio/Pages/Hobby/hobbies_page.dart';
 import 'package:personal_portfolio/Pages/HomePage/home_page.dart';
 import 'package:personal_portfolio/Pages/My_Stroy/my_story_page.dart';
 import 'package:personal_portfolio/Pages/contact_page.dart';
+import 'package:url_strategy/url_strategy.dart';
 
 void main() {
+  setPathUrlStrategy();
   runApp(const MyApp());
 }
 

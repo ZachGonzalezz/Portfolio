@@ -3,11 +3,7 @@ import 'package:flutter/material.dart';
 
 class Responsive {
   static bool isMobile(BuildContext context) =>
-      MediaQuery.of(context).size.width < 800;
-
-  static bool isTablet(BuildContext context) =>
-      MediaQuery.of(context).size.width >= 800 &&
-      MediaQuery.of(context).size.width < 1200;
+      MediaQuery.of(context).size.width < 1199;
 
   static bool isDesktop(BuildContext context) =>
       MediaQuery.of(context).size.width >= 1200;
@@ -20,5 +16,5 @@ class Responsive {
 
   //If is true then user in on mobile app if false user is in browser
   static bool isMobileOs(BuildContext context) =>
-      !kIsWeb || MediaQuery.of(context).size.width < 800;
+      !kIsWeb || MediaQuery.of(context).size.width < 1200;
 }

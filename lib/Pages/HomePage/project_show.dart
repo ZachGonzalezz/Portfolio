@@ -28,6 +28,9 @@ class ProjectShow extends StatelessWidget {
             decoration: BoxDecoration(
                 color: const Color(0xFF1D1B34),
                 borderRadius: BorderRadius.circular(20)),
+
+
+                
             child: Column(
               children: [
                 Padding(

@@ -14,7 +14,7 @@ class HeadingWithUnderline extends StatelessWidget {
         Constants.getText(
             text: text,
             weight: FontWeight.w900,
-            fontsize: Responsive.isBigDesktop(context) ? 60 : 40,
+            fontsize: Responsive.isBigDesktop(context) ? 60 : 35,
             alignment: TextAlign.left),
         const SizedBox(
           height: 5,

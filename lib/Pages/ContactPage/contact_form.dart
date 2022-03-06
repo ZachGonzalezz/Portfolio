@@ -5,6 +5,7 @@ import 'package:http/http.dart' as http;
 import 'package:personal_portfolio/Pages/ContactPage/textfield_form.dart';
 import 'package:personal_portfolio/constants.dart';
 import 'package:personal_portfolio/responsive.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ContactForm extends StatelessWidget {
   ContactForm({Key? key}) : super(key: key);
@@ -27,20 +28,20 @@ class ContactForm extends StatelessWidget {
             borderRadius: BorderRadius.circular(20),
             color: const Color(0xFF1D1B34)),
         child: Padding(
-          padding: const EdgeInsets.all(40.0),
+          padding: const EdgeInsets.all(20.0),
           child: Responsive.isMobileOs(context)
               ? Column(
                   children: [
                     Column(
                       children: [
                         SizedBox(
-                          width: 350,
+                          width: 360,
                           child: Column(
                             children: [
                               Constants.getText(
                                   text: "Let's Chat",
-                                  fontsize: 35,
-                                  weight: FontWeight.w800),
+                                  fontsize: 28,
+                                  weight: FontWeight.w700),
                               Constants.getText(text: '''
 Looking to learn more? 
 Feel free to inquire about my services by emailing or by requesting an appointment.
@@ -50,31 +51,40 @@ Feel free to inquire about my services by emailing or by requesting an appointme
                               ),
                               Constants.getText(
                                   text: "Email",
-                                  fontsize: 35,
-                                  weight: FontWeight.w800),
-                              Constants.getText(text: '''
-zacharygonzalez1234@gmail.com
-''', fontsize: 20, alignment: TextAlign.center),
+                                  fontsize: 28,
+                                  weight: FontWeight.w700),
+                              GestureDetector(
+                                onTap: (){
+                                  launch('mailto:zacharygonzalez1234@gmail.com');
+                                },
+                                child: Constants.getText(text:  Responsive.isMobileOs(context) ? 'zacharygonzalez1234\n@gmail.com' :  'zacharygonzalez1234@gmail.com', fontsize: 20, alignment: TextAlign.center, isUnderline: true)),
                               const SizedBox(
                                 height: 10,
                               ),
                               Constants.getText(
                                   text: "Number",
-                                  fontsize: 35,
-                                  weight: FontWeight.w800),
-                              Constants.getText(text: '''
-(702) 553 - 7534
-''', fontsize: 20, alignment: TextAlign.center),
+                                  fontsize: 28,
+                                  weight: FontWeight.w700),
+                              GestureDetector(
+                                onTap: (){
+                                  
+                                  launch('sms:7025537534');
+                               
+                                },
+                                child: Constants.getText(text: '(702) 553 - 7534', fontsize: 20, alignment: TextAlign.center, isUnderline: true)),
                               const SizedBox(
                                 height: 10,
                               ),
                               Constants.getText(
                                   text: "Appointment",
-                                  fontsize: 35,
-                                  weight: FontWeight.w800),
-                              Constants.getText(text: '''
-calendly.com/zacharygonzalez1234 
-''', fontsize: 20, alignment: TextAlign.center),
+                                  fontsize: 28,
+                                  weight: FontWeight.w700),
+                              GestureDetector(
+                                onTap: (){
+                                  launch('https://calendly.com/zacharygonzalez1234');
+                                },
+                                child: Constants.getText(text: 'calendly.com/zacharygonzalez1234', fontsize: 20, alignment: TextAlign.center, isUnderline: true),
+                              ),
                               const SizedBox(
                                 height: 10,
                               ),
@@ -105,7 +115,7 @@ calendly.com/zacharygonzalez1234
                                     padding: EdgeInsets.all(12),
                                     child: Constants.getText(
                                         text: 'Submit',
-                                        fontsize: 30,
+                                        fontsize: 25,
                                         weight: FontWeight.bold),
                                   ))),
                         )
@@ -188,13 +198,16 @@ Feel free to inquire about my services by emailing or by requesting an appointme
                               fontsize:
                                   Responsive.isBigDesktop(context) ? 50 : 35,
                               weight: FontWeight.w800),
-                          Constants.getText(
-                              text: '''
-zacharygonzalez1234@gmail.com
-''',
-                              fontsize:
-                                  Responsive.isBigDesktop(context) ? 30 : 20,
-                              alignment: TextAlign.center),
+                          GestureDetector(
+                             onTap: (){
+                                  launch('mailto:zacharygonzalez1234@gmail.com');
+                                },
+                            child: Constants.getText(
+                                text: 'zacharygonzalez1234@gmail.com',
+                                fontsize:
+                                    Responsive.isBigDesktop(context) ? 30 : 20,
+                                alignment: TextAlign.center, isUnderline: true),
+                          ),
                           const SizedBox(
                             height: 10,
                           ),
@@ -203,13 +216,16 @@ zacharygonzalez1234@gmail.com
                               fontsize:
                                   Responsive.isBigDesktop(context) ? 50 : 35,
                               weight: FontWeight.w800),
-                          Constants.getText(
-                              text: '''
-(702) 553 - 7534
-''',
-                              fontsize:
-                                  Responsive.isBigDesktop(context) ? 30 : 20,
-                              alignment: TextAlign.center),
+                          GestureDetector(
+                             onTap: (){
+                                  launch('sms:7025537534');
+                                },
+                            child: Constants.getText(
+                                text: '(702) 553 - 7534',
+                                fontsize:
+                                    Responsive.isBigDesktop(context) ? 30 : 20,
+                                alignment: TextAlign.center, isUnderline: true),
+                          ),
                           const SizedBox(
                             height: 10,
                           ),
@@ -218,13 +234,16 @@ zacharygonzalez1234@gmail.com
                               fontsize:
                                   Responsive.isBigDesktop(context) ? 50 : 35,
                               weight: FontWeight.w800),
-                          Constants.getText(
-                              text: '''
-calendly.com/zacharygonzalez1234 
-''',
-                              fontsize:
-                                  Responsive.isBigDesktop(context) ? 30 : 20,
-                              alignment: TextAlign.center),
+                          GestureDetector(
+                             onTap: (){
+                                  launch('https://calendly.com/zacharygonzalez1234');
+                                },
+                            child: Constants.getText(
+                                text: 'calendly.com/zacharygonzalez1234',
+                                fontsize:
+                                    Responsive.isBigDesktop(context) ? 30 : 20,
+                                alignment: TextAlign.center, isUnderline: true),
+                          ),
                           const SizedBox(
                             height: 10,
                           ),

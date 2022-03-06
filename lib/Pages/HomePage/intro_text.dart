@@ -9,7 +9,7 @@ class IntroText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 40),
+      padding: const EdgeInsets.symmetric(horizontal: 30),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: Responsive.isMobile(context)
@@ -24,7 +24,7 @@ class IntroText extends StatelessWidget {
               text: 'Zachary Gonzalez',
               alignment: Responsive.isMobile(context) ? TextAlign.center : null,
               height: Responsive.isMobile(context) ? 1.1 : 1.5,
-              fontsize: Responsive.isBigDesktop(context) ? 90 : 60,
+              fontsize: Responsive.isBigDesktop(context) ? 90 : 49,
               weight: FontWeight.w900),
           Align(
             alignment: Responsive.isMobileOs(context)

@@ -168,11 +168,11 @@ class FooterDesktop extends StatelessWidget {
                 Constants.getText(
                     text: 'Designed in Figma & Built in Flutter',
                     color: const Color(0xFF909090),
-                    fontsize: 20),
+                    fontsize: Responsive.isMobile(context) ? 18 : 20),
                 Constants.getText(
                     text: 'Last Updated 3.2.22',
                     color: const Color(0xFF909090),
-                    fontsize: 20),
+                    fontsize: Responsive.isMobile(context) ? 18 : 20),
               ],
             ),
           ),

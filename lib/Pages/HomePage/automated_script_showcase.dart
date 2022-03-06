@@ -12,7 +12,7 @@ class AutomatedScriptShowcase extends StatelessWidget {
         ShowcaseProjectTile(
           image: 'images/AutomatedScriptShowcase1.png',
           text: '''
-I wrote scripts for the recruiting company Talent360Avenue to automate some of THEIR tasks. It is common for recruiters to need to look up countless people at a time. So I automated a Google Chrome browser to search and collect information putting it all into a CSV
+I got the opprotunity to write scripts for Talent360Avenue to automate some of their tasks. It is common for recruiters to look up countless people at a tome. So I automated a Google Chrome browser to search and collect information, automatically putting it into a CSV.
 ''',
           isFilled: true,
         ),
@@ -33,7 +33,7 @@ In todays modern world people have more than just a phone number. I also automat
             image: 'images/TechStack.png',
             isFlipped: true,
             text: '''
-Each script is written in Python. For the texting campaign I used Twillio API. I also used Selenium code library for browser automation. As for the Twitter campaign I used Twitter Developer Portal to access information.
+The scripts are written in Python. For the Twitter texting campaign I use Twitter Developer Portal to access information. For texting campaign I use Twillio API to send message. I used the Selenium code library for browser automation.
 ''',
             isFilled: true),   
             DownloadAppButton(url: 'https://github.com/ZachGonzalezz/Campaign_Public/tree/master', buttonText: 'Github'),

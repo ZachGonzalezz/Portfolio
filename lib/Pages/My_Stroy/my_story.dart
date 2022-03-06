@@ -25,7 +25,7 @@ class MyStoryDesktop extends StatelessWidget {
               width: 500,
               child: Responsive.isMobileOs(context)
                   ? Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 30),
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -45,7 +45,7 @@ class MyStoryDesktop extends StatelessWidget {
                                 Constants.getText(
                                     text:
                                         'I starting coding in early middle school and instantly fell in love with technology. The pace of innovation is often compared to magic, which few understand yet we all depend on it everyday. I hope to make a meaningful difference in the world of technology and the lives of everyone.',
-                                    fontsize: 30),
+                                    fontsize: 27),
                               ],
                             ),
                           ),

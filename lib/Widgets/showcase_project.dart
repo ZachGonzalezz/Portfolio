@@ -36,7 +36,7 @@ class ShowcaseProjectTile extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                       Center(
-                          child: Image.asset(image, width: 450, height: 300)),
+                          child: Image.asset(image, width: 400, height: 300)),
                       SizedBox(
                         height: Responsive.isMobileOs(context) ? 540 : 350,
                         child: Row(
@@ -58,10 +58,10 @@ class ShowcaseProjectTile extends StatelessWidget {
                                   ),
                             SizedBox(
                                 width:
-                                    Responsive.isMobileOs(context) ? 250 : 350,
+                                    Responsive.isMobileOs(context) ? 230 : 350,
                                 child: Constants.getText(
                                   text: text,
-                                  fontsize: 25,
+                                  fontsize: 20,
                                 ))
                           ],
                         ),

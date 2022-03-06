@@ -19,7 +19,12 @@ class HomePage extends StatelessWidget {
             children: [
               const TopBarDesktop(),
               const IntroDesktop(),
-              const AboutMeDesktop(),
+            Display_Pic_and_Paragraph(
+              title: 'About Me',
+              body: 'I am a young developer aspiring to build innovative apps and software to find solutions to modern-day problems and to better improve the lives of those around me.',
+              imageUrl: 'images/IMG_7410.png',
+              curvesUrl: 'images/CurveLine2.png',
+            ),
               SkillShowcase(
                 title: 'Languages',
                 subtitle: 'Mobile Development',
@@ -36,7 +41,7 @@ class HomePage extends StatelessWidget {
                 title: 'Software',
                 subtitle: 'Programming Software',
                 paragraph:
-                    'I am familiar with the Vistual Studio Code, Android Studio, and Xcode Integrated Development Environments. I am proficent is a number of Google Cloud Services including Cloud Run, Firebase, Firestorage, Cloud Functions, App Engine, and more.',
+                    'I am familiar with the Vistual Studio Code, Android Studio, and Xcode Integrated Development Environments. I am proficient is a number of Google Cloud Services including Cloud Run, Firebase, Firestorage, Cloud Functions, App Engine, and more.',
                 skillLevels: const {
                   'Vscode': 0.95,
                   'Xcode': 0.85,
@@ -48,18 +53,18 @@ class HomePage extends StatelessWidget {
               ProjectShow(
                   imageUrl: 'images/PolarisShowcase1.png',
                   text:
-                      'Polaris is an app Developed by me focused on making it easier to find mentors.',
+                      'Polaris is an app developed by myself. Focusing on making a seamless process to find mentors',
                   projectName: 'Polaris'),
                    ProjectShow(
                   imageUrl: 'images/MixPlateShowcase1.png',
                   text:
-                      'Mixplate helps Tournament Staff run Bowling Tournaments easily by automating the process.',
+                      'Mixplate helps tournament staff run bowling tournaments easily by automating the process.',
                   projectName: 'MixPlate'),
             
                    ProjectShow(
                   imageUrl: 'images/AutomatedScriptShowcase2.png',
                   text:
-                      'Doing repetitive tasks online can be incredibily annyoing. Trying to message 1000\'s of people can be boring and time consuming. That where the bots I built come in handy.',
+                      'Doing repetitive tasks online can be incredibly annoying. Trying to message 1000\'s of people can be boring and time consuming. That\’s where the bots I built come in handy',
                   projectName: 'Automated Scripts'),
               const FooterDesktop()
             ],
