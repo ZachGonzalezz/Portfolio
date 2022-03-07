@@ -290,7 +290,7 @@ Feel free to inquire about my services by emailing or by requesting an appointme
   }
 
   void showPopUp(BuildContext context) {
-    Future.delayed(Duration(seconds: 0));
+    Future.delayed(Duration(milliseconds: 2));
     WidgetsBinding.instance!.addPostFrameCallback((_) => showDialog(
         context: context, builder: (context) {
    return AlertDialog(
@@ -307,7 +307,7 @@ Feel free to inquire about my services by emailing or by requesting an appointme
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Constants.getText(
-                      text: 'Make sure you put your name email subject message',
+                      text: 'Make sure every box is filled before sumbiting.\n Thank you!',
                       alignment: TextAlign.center,
                       fontsize: 30),
                   const SizedBox(
@@ -315,7 +315,7 @@ Feel free to inquire about my services by emailing or by requesting an appointme
                   ),
                   TextButton(
                       onPressed: () {
-                        sumbit(context);
+                        Navigator.pop(context);
                       },
                       child: Container(
                           decoration: BoxDecoration(

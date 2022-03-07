@@ -27,7 +27,7 @@ Amazingly in 2022 they did everything by hand. I made them a website that would 
         ShowcaseProjectTile(
             image: 'images/MixPlateShowcase3.png',
             text: '''
-The real world is not a static web page. This website accounts for that. Everything from the number of games to number of divisions is customizable, allowing for a flexible real world enviroment.
+The real world is not a static web page. This website accounts for that. Everything from the number of games to number of divisions is customizable, allowing for a flexible real world environment.
 ''',
             isFilled: true),
              ShowcaseProjectTile(

@@ -38,7 +38,7 @@ class MyStoryPage extends StatelessWidget {
         ShowcaseProjectTile(
             image: 'images/Mask Group.png',
             text: '''
-GuardFlow was very first app I started coding when I was 16. Before I beat around the bush, let me tell you the entire project failed and never went anywhere. Great resume material you may being saying. I know! (Multiple people told me this was a horrible idea)
+GuardFlow was the very first app I started coding when I was 16. Before I beat around the bush, let me tell you the entire project failed and never went anywhere. Great resume material you may being saying. I know! (Multiple people told me this was a horrible idea)
 ''',
             isFilled: true),
         ShowcaseProjectTile(
