@@ -58,8 +58,8 @@ class HomePage extends StatelessWidget {
                    ProjectShow(
                   imageUrl: 'images/MixPlateShowcase1.png',
                   text:
-                      'Mixplate helps tournament staff run bowling tournaments easily by automating the process.',
-                  projectName: 'MixPlate'),
+                      'Mixedplate helps tournament staff run bowling tournaments easily by automating the process.',
+                  projectName: 'MixedPlate'),
             
                    ProjectShow(
                   imageUrl: 'images/AutomatedScriptShowcase2.png',

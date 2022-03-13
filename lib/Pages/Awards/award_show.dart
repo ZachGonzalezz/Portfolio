@@ -19,6 +19,8 @@ class AwardShowScreen extends StatelessWidget {
         children: [
           const TopBarDesktop(),
           AwardShowcase(title: title, text: text, images: images),
+          
+         
           const FooterDesktop()
         ]
       ),

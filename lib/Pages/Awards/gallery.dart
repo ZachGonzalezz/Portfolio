@@ -39,7 +39,7 @@ class Gallery extends StatelessWidget {
                     url: '2',
                     title: 'Presentation at Tech Alley Demo Day',
                     body:
-                        'I presented my app, Polaris, at Demo Day in Downtown Las Vegas. '),
+                        'I presented my app, Polaris, at Demo Day in Downtown Las Vegas.'),
                 GalleryPicture(
                     height: Responsive.isMobileOs(context)
           ?  300 : 300,
