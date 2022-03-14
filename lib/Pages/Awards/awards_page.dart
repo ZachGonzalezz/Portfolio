@@ -22,6 +22,7 @@ class AwardsPage extends StatelessWidget {
               body: 'I had the honor to speak at Joshua Copeland\'s Las Vegas Programmer meetup. I was given the opprotunity to share my app idea Polaris to an audience full of experienced programmers.',
               imageUrl: Responsive.isMobileOs(context) ?  'images/awards/AwardsGallery1_Mobile.png': 'images/awards/AwardsGallery1.png',
               curvesUrl: 'images/CurveLine2.png',
+              height: 750,
             ),
              Display_Pic_and_Paragraph(
               title: 'Above and Beyond Scholarship',
@@ -29,6 +30,7 @@ class AwardsPage extends StatelessWidget {
                imageUrl: Responsive.isMobileOs(context) ?  'images/awards/AwardsGallery4_Mobile.png': 'images/awards/AwardsGallery4.png',
               curvesUrl: 'images/CurveLine1.png',
               isFlipped: true,
+              height: 750,
             ),
              Display_Pic_and_Paragraph(
               title: 'FBI Teen Academy',
@@ -55,6 +57,7 @@ class AwardsPage extends StatelessWidget {
                imageUrl: Responsive.isMobileOs(context) ?  'images/awards/AwardsGallery3_Mobile.png': 'images/awards/AwardsGallery3.png',
               curvesUrl: 'images/CurveLine1.png',
               isFlipped: true,
+              height: 870,
             ),
              Display_Pic_and_Paragraph(
               title: 'Apple Swift Associate Certification',
@@ -68,6 +71,7 @@ class AwardsPage extends StatelessWidget {
               body: 'The president of Mixedplate Bowling wrote a letter of recommendation for me as a thank you for writing the software for her bowling league. If you want to know more, this project can be found on the Home page under Projects.',
               imageUrl: Responsive.isMobileOs(context) ?  'images/awards/AwardsGallery8_Mobile.png': 'images/awards/AwardsGallery8.png',
               curvesUrl: 'images/CurveLine4.png',
+              height: 800,
             ),
             //  Display_Pic_and_Paragraph(
             //   title: '',

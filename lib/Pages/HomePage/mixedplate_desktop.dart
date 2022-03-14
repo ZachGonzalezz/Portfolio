@@ -12,7 +12,7 @@ class MixedPlateShowcaseDesktop extends StatelessWidget {
         ShowcaseProjectTile(
           image: 'images/MixPlateShowcase1.png',
           text: '''
-You cant save the world all the time! Which is where Mixplate Bowling comes in. A small local bowling league in need of help running their bowling tournaments.
+You cant save the world all the time! Which is where Mixedplate Bowling comes in. A small local bowling league in need of help running their bowling tournaments.
 
 ''',
           isFilled: true,

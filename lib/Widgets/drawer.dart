@@ -24,7 +24,7 @@ class DrawerMenu extends StatelessWidget {
           ),
           TopBarTextButton(title: 'Home', url: '/'),
           TopBarTextButton(title: 'My Story', url: '/mystory'),
-          TopBarTextButton(title: 'Awards', url: '/myawards'),
+          TopBarTextButton(title: 'Accolades', url: '/myawards'),
           TopBarTextButton(title: 'Hobbies', url: '/hobbies'),
           TopBarTextButton(title: 'Contact', url: '/contact'),
         ],

@@ -10,6 +10,7 @@ class Display_Pic_and_Paragraph extends StatelessWidget {
       required this.body,
       required this.curvesUrl,
       required this.imageUrl,
+      this.height = 700,
       this.isFlipped = false})
       : super(key: key);
   String title;
@@ -17,22 +18,23 @@ class Display_Pic_and_Paragraph extends StatelessWidget {
   String curvesUrl;
   String imageUrl;
   bool isFlipped;
+  double height;
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(top: Responsive.isMobileOs(context) ? 10 : 100),
       child: SizedBox(
-        height: Responsive.isMobileOs(context) ? 700 : 600,
+        height: Responsive.isMobileOs(context) ? height : 600,
         child: Stack(
           children: [
             Positioned.fill(
                 child: Padding(
               padding: Responsive.isMobileOs(context)
-                  ? EdgeInsets.only(bottom: 300)
+                  ? const EdgeInsets.only(bottom: 300)
                   : EdgeInsets.zero,
               child: Image.asset(
                 curvesUrl,
-                opacity: AlwaysStoppedAnimation<double>(0.6),
+                opacity: const AlwaysStoppedAnimation<double>(0.6),
                 width: MediaQuery.of(context).size.width,
               ),
             )),
@@ -52,7 +54,7 @@ class Display_Pic_and_Paragraph extends StatelessWidget {
                               ],
                             ),
                             const SizedBox(
-                              height: 0,
+                              height: 20,
                             ),
                             Image.asset(
                               imageUrl,
@@ -60,6 +62,10 @@ class Display_Pic_and_Paragraph extends StatelessWidget {
                               height:
                                   Responsive.isMobileOs(context) ? 375 : 800,
                             ),
+                             const SizedBox(
+                              height: 100,
+                            ),
+
                           ],
                         ),
                       )

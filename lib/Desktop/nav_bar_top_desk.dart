@@ -23,7 +23,7 @@ class TopBarDesktop extends StatelessWidget {
           Responsive.isMobileOs(context) ? const SizedBox() : Image.asset('images/Portfolio_Logo.png', width: 40, height: 40),
           Responsive.isMobileOs(context) ? const SizedBox() : TopBarTextButton(title: 'Home', url: '/'),
           Responsive.isMobileOs(context) ? const SizedBox() : TopBarTextButton(title: 'My Story', url: '/mystory'),
-          Responsive.isMobileOs(context) ? const SizedBox() : TopBarTextButton(title: 'Awards', url: '/myawards'),
+          Responsive.isMobileOs(context) ? const SizedBox() : TopBarTextButton(title: 'Accolades', url: '/myawards'),
           Responsive.isMobileOs(context) ? const SizedBox() : TopBarTextButton(title: 'Hobbies', url: '/hobbies'),
           Responsive.isMobileOs(context) ? const SizedBox() : TopBarTextButton(title: 'Contact', url: '/contact'),
             ],
